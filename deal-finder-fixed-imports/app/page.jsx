@@ -15,6 +15,8 @@ export default function DealFinder() {
   const [deals, setDeals] = useState([]);
   const [loading, setLoading] = useState(false);
 
+  console.log("SUPABASE URL:", supabaseUrl);
+
   const handleSearch = async () => {
     if (!company.trim()) return;
 
