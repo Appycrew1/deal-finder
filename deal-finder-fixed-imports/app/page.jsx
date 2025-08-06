@@ -23,10 +23,9 @@ export default function DealFinder() {
     setLoading(true);
     try {
       const { data, error } = await supabase
-        .from('deals')
-        .select('*')
-        .ilike('company', `%${company}%`)
-        .order('created_at', { ascending: false });
+  .from('deals')
+  .select('*');
+
 
       if (error) throw error;
 
